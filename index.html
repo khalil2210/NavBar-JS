@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Navbar
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <style>
+        body{overflow: hidden;}
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 22px;   
+        }
+        a:hover{
+            color: black;
+        }
+        main{
+            width: 100%;
+            background-repeat: no-repeat;
+            height: 100vh;
+            background-size:cover;
+            background-image: url(https://www.tracedirecte.com/uploads/Image/45/IMF_WEBZINE/GAB_TRACEDIRECTE/5392_648_paysage-serengeti-tanzanie.jpg);
+        }
+        div.nav{
+            background-color: rgba(83, 61, 14, 0.384);
+            backdrop-filter: blur(5px);
+            height: fit-content;}
+        #navbutton{
+            position: relative;
+            top: 10px;
+            background: transparent;
+           
+            border-color: transparent;
+            float: right;}
+            i{       
+                cursor: pointer; 
+            font-size: 30px;
+            transition: transform 250ms ease 150ms;} 
+        
+        h1{
+            font-size: 50px;
+            color: white;
+        }
+        #navbar{
+            display: flex;
+            justify-content: space-around;
+           }
+        @media screen and (min-width: 700px) { 
+             
+            #navbar{
+                align-items: center;
+                height: 70px;} 
+                #textt{
+               width: 30%;
+           }
+           i{  
+                transform:translateX(50px);}
+            }      
+        @media screen and (max-width: 700px) { 
+             #navbar{
+                flex-direction: column;
+                align-items: flex-start;}
+           #textt{
+               width: fit-content;
+           }
+              i{
+                transform:translateX(0px);}
+         div.hide{
+            overflow: hidden;
+            height: 0px;
+            transition: height 500ms ease;}
+        div.show{
+        transition: height 500ms ease;
+        height: 150px;}}
+        
+        #textt{
+            border-style: solid;
+            text-align: center ;
+           
+           backdrop-filter: blur(3px);
+           background-color:  rgba(219, 140, 36, 0.151);
+           border-color:white;
+           margin: auto;
+           position: relative;
+           top: 30%;
+        }
+        </style> 
+</head>
+<body>
+    <main>
+        <div class="nav"> 
+            <button id="navbutton">
+            <i class="fas fa-align-justify"></i>
+            </button>
+            
+        <div id="navbar" class="hide">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Photos</a>
+        </div>
+        </div>
+      
+    <div id="textt">
+    <h1>Welcome !</h1>
+   </div>
+</main>
+<script>
+    var click=0;
+    var navbar=document.getElementById("navbar");
+    var nav=document.getElementById("navbutton");
+    nav.addEventListener("click",hideshow); 
+    function hideshow(){
+        if(click%2==0){
+        navbar.classList.remove("hide");
+        navbar.classList.add("show");
+        }
+        else{navbar.classList.remove("show");
+        navbar.classList.add("hide");}
+        click++;
+    }
+</script>
+</body>
+</html>
