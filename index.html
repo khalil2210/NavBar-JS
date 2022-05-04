@@ -45,21 +45,44 @@
             font-size: 50px;
             color: white;
         }
+
+
+        #txt_resize_me{
+            font-size: 25px;
+            text-align: center;
+            position: relative;
+            top:20%;
+            transition: color  350ms ease 300ms; 
+          
+        }
+
         #navbar{
             display: flex;
             justify-content: space-around;
            }
+
         @media screen and (min-width: 700px) { 
              
             #navbar{
                 align-items: center;
                 height: 70px;} 
+
                 #textt{
                width: 30%;
            }
            i{  
                 transform:translateX(50px);}
-            }      
+
+
+            #txt_resize_me{
+            color: rgb(255, 255, 255);
+        }
+            
+            
+            }    
+            
+            
+
         @media screen and (max-width: 700px) { 
              #navbar{
                 flex-direction: column;
@@ -75,11 +98,19 @@
             transition: height 500ms ease;}
         div.show{
         transition: height 500ms ease;
-        height: 150px;}}
+        height: 150px;}
+
+       #txt_resize_me{
+            color: rgb(121, 25, 25);
+        }
+
+    
+    
+    }
         
         #textt{
             border-style: solid;
-            text-align: center ;
+           text-align: center ;
            
            backdrop-filter: blur(3px);
            background-color:  rgba(219, 140, 36, 0.151);
@@ -88,7 +119,12 @@
            position: relative;
            top: 30%;
         }
+
+  
+
+
         </style> 
+
 </head>
 <body>
     <main>
@@ -107,7 +143,9 @@
       
     <div id="textt">
     <h1>Welcome !</h1>
+
    </div>
+   <h3 id="txt_resize_me">resize me !</h3>
 </main>
 <script src="script"></script>
 </body>
