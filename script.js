@@ -1,3 +1,4 @@
+alert("Open this project on a desktop and resize the window to see the animation")
 var click=0;
     var navbar=document.getElementById("navbar");
     var nav=document.getElementById("navbutton");
